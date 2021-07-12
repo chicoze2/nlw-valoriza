@@ -15,6 +15,7 @@ const authenticateUserController = new AuthenticateUserController();
 const createElogioController = new CreateElogioController();
 
 
+
 router.post("/users", createUserController.handle);
 router.post('/tags', verificarAutenticacao, verificarAdmin, createTagController.handle);
 router.post('/login', authenticateUserController.handle);
