@@ -20,6 +20,10 @@ class CreateUserService{
             throw new Error("Email incorreto")
         }
 
+        if(!admin){
+            admin = false
+        }
+
         const passwordHash = await hash(password, 8)
 
         const userAlreadyExists = await usersRepository.findOne({ //pesquisar se já existe esse email cadastrado no banco de dados

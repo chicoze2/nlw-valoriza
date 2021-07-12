@@ -20,7 +20,7 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     }
 
     return response.status(500).json({
-        status : "error",
+        status : "erro na execução de uma função não rastreada",
         message: "Internal Server Error"
     })
 }) 
